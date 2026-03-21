@@ -1,3 +1,3 @@
 # Projeto Xadrez
-Criando projeto do zero novamente.
-Criando classes no xadrez
+#Criando projeto do zero novamente.
+#Criando classes no xadrez
