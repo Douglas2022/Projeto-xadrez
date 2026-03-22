@@ -1,3 +1,6 @@
-# Projeto Xadrez
-#Criando projeto do zero novamente.
-#Criando classes no xadrez
+
+## Objetivo
+
+- Criar as classes iniciais do tabuleiro
+- Implementar as peças e regras do jogo
+- Exibir o tabuleiro no console
