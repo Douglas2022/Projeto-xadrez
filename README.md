@@ -1,13 +1,12 @@
-
-## Objetivo
-
--# ♟️ Projeto Xadrez em C#
+# ♟️ Projeto Xadrez em C#
 
 ## 📌 Objetivo
 
-Este projeto tem como objetivo desenvolver um jogo de xadrez utilizando a linguagem C#, com foco em aplicar conceitos de programação orientada a objetos, lógica e estrutura de dados.
+Este projeto tem como objetivo desenvolver um jogo de xadrez utilizando a linguagem C#, com foco na aplicação de conceitos de programação orientada a objetos, lógica e estrutura de dados.
 
-## 🎯 Objetivos específicos
+---
+
+## 🎯 Objetivos Específicos
 
 * Criar as classes iniciais que representam o tabuleiro e suas posições
 * Implementar as peças do jogo (Rei, Rainha, Torre, Bispo, Cavalo e Peão)
@@ -15,7 +14,9 @@ Este projeto tem como objetivo desenvolver um jogo de xadrez utilizando a lingua
 * Validar jogadas conforme as regras oficiais do xadrez
 * Exibir o tabuleiro no console de forma clara e organizada
 
-## 🧠 Conceitos aplicados
+---
+
+## 🧠 Conceitos Aplicados
 
 * Programação Orientada a Objetos (POO)
 * Encapsulamento e herança
@@ -23,10 +24,15 @@ Este projeto tem como objetivo desenvolver um jogo de xadrez utilizando a lingua
 * Estruturas de repetição e decisão
 * Manipulação de matrizes
 
+---
+
 ## 💻 Execução
 
 O projeto será executado em ambiente console, permitindo visualizar o estado do tabuleiro e realizar interações básicas com o jogo.
 
-## 🚀 Status do projeto
+---
 
-Em desenvolvimento
+## 🚀 Status do Projeto
+
+🚧 Em desenvolvimento
+
