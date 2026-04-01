@@ -1,7 +1,7 @@
 ﻿using System;
-using tabuleiro;
 using xadrez;
 using Xadrez.tabuleiro;
+
 
 namespace Xadrez
 {
@@ -9,12 +9,16 @@ namespace Xadrez
     {
         static void Main(string[] args)
         {
-            PosicaoXadrez pos = new PosicaoXadrez('a', 1);
+            try
+            {
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
-            Console.WriteLine(pos);
-
-            Console.WriteLine(pos.toPosicao());
-
+                Tela.imprimirTabuleiro(partida.tab);
+            }
+            catch(TabuleiroException e)
+            {
+                Console.WriteLine(e.Message);
+            }
             Console.ReadLine();
         }
     }
