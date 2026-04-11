@@ -1,25 +1,20 @@
 ﻿using System;
+using tabuleiro;
 using xadrez;
-using Xadrez.tabuleiro;
+using Xadrez;
 
 
-namespace Xadrez
-{
+
+namespace Xadrez { 
     internal class Program
     {
         static void Main(string[] args)
         {
-            try
-            {
-                PartidaDeXadrez partida = new PartidaDeXadrez();
+            PosicaoXadrez pos = new PosicaoXadrez('a',1);
+            Console.WriteLine(pos);
 
-                Tela.imprimirTabuleiro(partida.tab);
-            }
-            catch(TabuleiroException e)
-            {
-                Console.WriteLine(e.Message);
-            }
             Console.ReadLine();
+            
         }
     }
 }
