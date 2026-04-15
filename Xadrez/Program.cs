@@ -11,15 +11,9 @@ namespace Xadrez {
         {
             try
             {
-                Tabuleiro tab = new Tabuleiro(8, 8);
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                tab.colocarPeca(new Torre(tab,Cor.Preta),new Posicao(0,0));
-                tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
-                tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 2));
-
-                tab.colocarPeca(new Torre(tab, Cor.Branca), new Posicao(3, 5));
-
-                Tela.imprimirTabuleiro(tab);
+                Tela.imprimirTabuleiro(partida.tab);
             }
             catch(TabuleiroException e) 
             {
