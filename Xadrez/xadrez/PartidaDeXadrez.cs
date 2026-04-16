@@ -1,5 +1,6 @@
 ﻿using System;
 using tabuleiro;
+using Xadrez.tabuleiro;
 
 
 namespace xadrez
@@ -9,16 +10,25 @@ namespace xadrez
         public Tabuleiro tab { get;private set; }
         private int turno;
         private Cor JogadorAtual;
+        public bool terminada { get;private set; }
+
+
 
         public PartidaDeXadrez()
         {
             tab = new Tabuleiro(8, 8);
             turno = 1;
             JogadorAtual = Cor.Branca;
+            terminada = false;
             colocarPeca();
         }
         public void executaMovimento(Posicao origem, Posicao destino)
         {
+            if(tab.peca(origem) == null)
+            {
+                throw new TabuleiroException("Não exixte posição de origem");
+            }
+
             Peca p = tab.retirarPeca(origem);
             p.incrementarQteMovimentos();
             Peca pecaCapiturada = tab.retirarPeca(destino);
