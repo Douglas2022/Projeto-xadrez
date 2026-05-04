@@ -12,8 +12,6 @@ namespace xadrez
         private Cor JogadorAtual;
         public bool terminada { get;private set; }
 
-
-
         public PartidaDeXadrez()
         {
             tab = new Tabuleiro(8, 8);

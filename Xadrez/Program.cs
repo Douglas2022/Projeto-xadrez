@@ -28,7 +28,7 @@ namespace Xadrez
 
                 }
 
-                Tela.imprimirTabuleiro(partida.tab);
+                //Tela.imprimirTabuleiro(partida.tab);
             }
             catch (TabuleiroException e)
             {
