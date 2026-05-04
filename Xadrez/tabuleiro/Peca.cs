@@ -13,9 +13,9 @@
             this.tab = tab;
             this.cor = cor;
             this.qtdMovimentos = 0;
-
         }
-        public void incrementarQteMovimentos()
+
+        public void incrementarQteMovimentos() // 👈 TEM QUE EXISTIR
         {
             qtdMovimentos++;
         }

@@ -50,5 +50,7 @@ namespace Xadrez
                 Console.ForegroundColor = aux;
             }
         }
+       
+        
     }
 }
