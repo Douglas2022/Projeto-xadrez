@@ -1,6 +1,6 @@
 ﻿namespace tabuleiro
 {
-    internal class Peca
+    abstract class Peca
     {
         public Posicao posicao { get; set; }
         public Cor cor { get; protected set; }
@@ -15,9 +15,6 @@
             this.qtdMovimentos = 0;
         }
 
-        public void incrementarQteMovimentos() // 👈 TEM QUE EXISTIR
-        {
-            qtdMovimentos++;
-        }
+        public abstract bool[,] movimentosPossiveis();
     }
 }
