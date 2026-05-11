@@ -62,6 +62,17 @@ namespace xadrez
                 }
                 pos.Coluna = pos.Coluna + 1;
             }
+            //Esquerda
+            pos.definirValor(posicao.Linha, posicao.Coluna - 1);
+            while (tab.posicaoValida(pos) && podeMover(pos))
+            {
+                mat[pos.Linha, pos.Coluna] = true;
+                if (tab.peca(pos) != null && tab.peca(pos).cor != this.cor)
+                {
+                    break;
+                }
+                pos.Coluna = pos.Coluna - 1;
+            }
 
             return mat;
         }

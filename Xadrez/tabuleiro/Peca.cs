@@ -15,6 +15,11 @@
             this.qtdMovimentos = 0;
         }
 
+        public void incrementarQtdeMovimentos()
+        {
+            qtdMovimentos++;
+        }
+
         public abstract bool[,] movimentosPossiveis();
     }
 }

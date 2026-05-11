@@ -28,7 +28,7 @@ namespace xadrez
             }
 
             Peca p = tab.retirarPeca(origem);
-            p.incrementarQteMovimentos();
+            p.incrementarQtdeMovimentos();
             Peca pecaCapiturada = tab.retirarPeca(destino);
             tab.colocarPeca(p, destino);
 

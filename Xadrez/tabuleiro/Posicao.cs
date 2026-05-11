@@ -10,6 +10,11 @@
             Linha = linha;
             Coluna = coluna;
         }
+        public void definirValor(int Linha, int Coluna)
+        {
+            this.Linha = Linha;
+            this.Coluna = Coluna;
+        }
         public override string ToString()
         {
             return Linha
