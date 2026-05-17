@@ -15,7 +15,7 @@ namespace Xadrez
                 Console.Write(8 - i + " ");
                 for (int j = 0; j < tab.colunas; j++)
                 {
-                    imprimirPeca(tab.peca(i, j));
+                    imprimirPeca(tab.peca(i , j));
                 }
                 Console.WriteLine();
             }
@@ -70,9 +70,10 @@ namespace Xadrez
                 {
                     ConsoleColor aux = Console.ForegroundColor;
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.Write(peca + " ");
+                    Console.Write(peca);
                     Console.ForegroundColor = aux;
                 }
+                Console.Write(" ");
             }
         }
 
