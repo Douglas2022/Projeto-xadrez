@@ -21,5 +21,7 @@
         }
 
         public abstract bool[,] movimentosPossiveis();
+
+        public override abstract string ToString();
     }
 }
