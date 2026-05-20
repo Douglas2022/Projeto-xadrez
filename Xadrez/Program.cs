@@ -17,9 +17,12 @@ namespace Xadrez
                 {
                     Console.Clear();
                     Tela.imprimirTabuleiro(partida.tab);
+                    Console.WriteLine();
+                    Console.WriteLine("Turno: " + partida.turno);
+                    Console.WriteLine("Aguardando a jogada da pessoa atual: " + partida.JogadorAtual);
 
                     Console.WriteLine();
-                    Console.Write("Origem:");
+                    Console.Write("Origem: ");
                     Posicao Origem = Tela.lerPosicaoXadrez().ToPosicao();
 
                     bool[,]posicaoPossiveis = partida.tab.peca(Origem).movimentosPossiveis();
@@ -27,14 +30,14 @@ namespace Xadrez
                     Console.Clear();
                     Tela.imprimirTabuleiro(partida.tab,posicaoPossiveis);
 
-                    Console.Write("Destino:");
+                    Console.WriteLine();
+                    Console.Write("Destino: ");
                     Posicao Destino = Tela.lerPosicaoXadrez().ToPosicao();
 
-                    partida.executaMovimento(Origem, Destino);
+                    partida.realizaJogada(Origem,Destino);
 
                 }
 
-                //Tela.imprimirTabuleiro(partida.tab);
             }
             catch (TabuleiroException e)
             {
