@@ -8,9 +8,9 @@ namespace xadrez
     internal class PartidaDeXadrez
     {
         public Tabuleiro tab { get;private set; }
-        public int turno;{ get; private set; }
-        public Cor JogadorAtual;{ get; private set; }
-        public bool terminada { get;private set; }
+        public int turno{ get; private set; }
+        public Cor JogadorAtual{ get; private set; }
+        public bool terminada{ get;private set; }
 
         public PartidaDeXadrez()
         {
@@ -35,7 +35,10 @@ namespace xadrez
         }
         public void realizaJogada(Posicao origem,Posicao destino)
         {
-            mudaJogador;
+            executaMovimento(origem,destino);
+            turno++;
+            mudarJogador();
+
         }
         private void mudarJogador()
         {
@@ -45,7 +48,7 @@ namespace xadrez
             }
             else
             {
-                JogadorAtual = Cor.Branca
+                JogadorAtual = Cor.Branca;
             }
         }
         private void colocarPeca()
