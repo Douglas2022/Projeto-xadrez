@@ -34,9 +34,11 @@
             }
             return false;
         }
+        public bool poderMoverPara(Posicao pos)
+        {
+            return movimentosPossiveis()[pos.Linha, pos.Coluna];
+        }
 
         public abstract bool[,] movimentosPossiveis();
-
-        public override abstract string ToString();
     }
 }
