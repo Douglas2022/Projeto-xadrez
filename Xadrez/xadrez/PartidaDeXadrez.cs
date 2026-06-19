@@ -100,13 +100,56 @@ namespace xadrez
             aux.ExceptWith(pecasCapituradas(cor));
             return aux;
         }
+        private Cor adversaria(Cor cor)
+        {
+            if(cor == Cor.Branca)
+            {
+                return Cor.Preta;
+            }
+            else
+            {
+                return Cor.Branca;
+            }
+        }
+        private Peca rei(Cor cor)
+        {
+            foreach(Peca x in pecasEmJogo(cor))
+            {
+                if(x is Rei)
+                {
+                    return x;
+                }
+            }
+            return null;
+        }
 
         public void colocarNovaPeca(char coluna,int linha,Peca peca)
         {
             tab.colocarPeca(peca,new PosicaoXadrez(coluna,linha).ToPosicao());
             pecas.Add(peca);
         }
-
+        public bool estarEmXeque(Cor cor) 
+        { 
+            Peca R = rei(cor);
+            if(R == null)
+            {
+                throw new Exception("Não tem rei da cor " + cor + "no tabuleiro");
+            }
+            foreach(Peca x in pecasEmJogo(adversaria(cor)))
+            {
+                bool[,] mat = x.movimentosPossiveis();
+                if (mat[R.posicao.Linha, R.posicao.Coluna])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public void colocarNovasPecas(char coluna,int linha,Peca pecas)
+        {
+            tab.colocarPeca(pecas, new PosicaoXadrez(coluna,linha).ToPosicao());
+            Peca.add(pecas);
+        }
         private void colocarPeca()
         {
             colocarNovaPeca('c', 1, new Torre(tab, Cor.Branca));
