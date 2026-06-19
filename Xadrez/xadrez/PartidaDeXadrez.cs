@@ -26,16 +26,14 @@ namespace xadrez
         }
         public void executaMovimento(Posicao origem, Posicao destino)
         {
-            if(tab.peca(origem) == null)
-            {
-                throw new TabuleiroException("Não exixte posição de origem");
-            }
-
             Peca p = tab.retirarPeca(origem);
             p.incrementarQtdeMovimentos();
             Peca pecaCapiturada = tab.retirarPeca(destino);
             tab.colocarPeca(p, destino);
-
+            if (pecaCapiturada != null)
+            {
+                capturadas.Add(pecaCapiturada);
+            }
         }
         public void realizaJogada(Posicao origem,Posicao destino)
         {
@@ -77,6 +75,32 @@ namespace xadrez
                 JogadorAtual = Cor.Branca;
             }
         }
+        public HashSet<Peca> pecasCapituradas(Cor cor)
+        {
+            HashSet<Peca> aux = new HashSet<Peca>();
+            foreach(Peca x in capturadas)
+            {
+                if(x.cor == cor)
+                {
+                    aux.Add(x);
+                }
+            }
+            return aux;
+        }
+        public HashSet<Peca> pecasEmJogo(Cor cor)
+        {
+            HashSet<Peca> aux = new HashSet<Peca>();
+            foreach(Peca x in pecas)
+            {
+                if(x.cor == cor)
+                {
+                    aux.Add(x);
+                }
+            }
+            aux.ExceptWith(pecasCapituradas(cor));
+            return aux;
+        }
+
         public void colocarNovaPeca(char coluna,int linha,Peca peca)
         {
             tab.colocarPeca(peca,new PosicaoXadrez(coluna,linha).ToPosicao());
