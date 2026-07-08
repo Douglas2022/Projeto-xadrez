@@ -4,9 +4,10 @@ namespace xadrez
 {
     internal class Rei : Peca
     {
-        public Rei(Tabuleiro tab, Cor cor) : base(tab, cor)
+        private PartidaDeXadrez partida;
+        public Rei(Tabuleiro tab, Cor cor, PartidaDeXadrez partida) : base(tab, cor)
         {
-
+            this.partida = partida;
         }
 
         public override string ToString()
@@ -18,6 +19,12 @@ namespace xadrez
         {
             Peca p = tab.peca(pos);
             return p == null || p.cor != this.cor;
+        }
+        private bool testeTorreParaRoque(Posicao pos)
+        {
+            Peca p = tab.peca(pos);
+            return p != null && p is Torre && p.cor == cor && p.qtdMovimentos == 0;
+
         }
 
         public override bool[,] movimentosPossiveis()
@@ -80,6 +87,11 @@ namespace xadrez
             if (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
+            }
+            //jogado especial roque pequeno
+            if(qtdMovimentos == 0 && !partida.Xeque)
+            {
+                Posicao posT1 = new Posicao(posicao.Linha, posicao.Coluna + 3);
             }
 
             return mat;
