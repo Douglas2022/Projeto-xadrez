@@ -15,7 +15,7 @@ namespace xadrez
         private HashSet<Peca> pecas;
         private HashSet<Peca> capturadas;
         public bool Xeque { get; private set; }
-        private Peca vulneravelEnpassant { get; set; }
+        public Peca vulneravelEnpassant { get;private set; }
         public PartidaDeXadrez()
         {
             tab = new Tabuleiro(8, 8);
