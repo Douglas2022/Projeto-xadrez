@@ -3,6 +3,7 @@ using tabuleiro;
 using Xadrez.tabuleiro;
 using System.Collections.Generic;
 using Xadrez.xadrez;
+using System.Text.RegularExpressions;
 
 namespace xadrez
 {
@@ -62,11 +63,11 @@ namespace xadrez
                     Posicao posP;
                     if (p.cor == Cor.Branca)
                     {
-                        posP = new Posicao(destino.Linha + 1, origem.Coluna);
+                        posP = new Posicao(destino.Linha + 1, destino.Coluna);
                     }
                     else
                     {
-                        posP = new Posicao(destino.Linha - 1, origem.Coluna);
+                        posP = new Posicao(destino.Linha - 1, destino.Coluna);
                     }
                     pecaCapiturada = tab.retirarPeca(posP);
                     capturadas.Add(pecaCapiturada);
@@ -148,7 +149,7 @@ namespace xadrez
             }
             //# Jogada espwcial Enpassant
             Peca p = tab.peca(destino);
-            if (p is Peca && (destino.Linha == origem.Linha - 2 || destino.Linha == origem.Linha + 2))
+            if (p is Peca && Math.Abs(destino.Linha - origem.Linha) == 2)
             {
                 vulneravelEnpassant = p;
             }
@@ -326,7 +327,6 @@ namespace xadrez
             colocarNovaPeca('b', 7, new Peao(tab, Cor.Preta, this));
             colocarNovaPeca('c', 7, new Peao(tab, Cor.Preta, this));
             colocarNovaPeca('d', 7, new Peao(tab, Cor.Preta, this));
-            colocarNovaPeca('e', 7, new Peao(tab, Cor.Preta, this));
             colocarNovaPeca('e', 7, new Peao(tab, Cor.Preta, this));
             colocarNovaPeca('f', 7, new Peao(tab, Cor.Preta, this));
             colocarNovaPeca('g', 7, new Peao(tab, Cor.Preta, this));

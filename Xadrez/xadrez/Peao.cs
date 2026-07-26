@@ -57,12 +57,12 @@ namespace Xadrez.xadrez
                     Posicao esquerda = new Posicao(posicao.Linha,posicao.Coluna -1);
                     if(tab.posicaoValida(esquerda) &&  existeInimigo(esquerda) && tab.peca(esquerda) == partida.vulneravelEnpassant)
                     {
-                        mat[esquerda.Linha,esquerda.Coluna] = true;
+                        mat[esquerda.Linha -1,esquerda.Coluna] = true;
                     }
                     Posicao direita = new Posicao(posicao.Linha, posicao.Coluna + 1);
                     if (tab.posicaoValida(direita) && existeInimigo(direita) && tab.peca(direita) == partida.vulneravelEnpassant)
                     {
-                        mat[direita.Linha, direita.Coluna] = true;
+                        mat[direita.Linha -1, direita.Coluna] = true;
                     }
 
                 }
@@ -90,17 +90,17 @@ namespace Xadrez.xadrez
                     mat[pos.Linha, pos.Coluna] = true;
                 }
                 //Jogada especial EnPassant
-                if (posicao.Linha == 3)
+                if (posicao.Linha == 4)
                 {
                     Posicao esquerda = new Posicao(posicao.Linha, posicao.Coluna - 1);
                     if (tab.posicaoValida(esquerda) && existeInimigo(esquerda) && tab.peca(esquerda) == partida.vulneravelEnpassant)
                     {
-                        mat[esquerda.Linha, esquerda.Coluna] = true;
+                        mat[esquerda.Linha + 1, esquerda.Coluna] = true;
                     }
                     Posicao direita = new Posicao(posicao.Linha, posicao.Coluna + 1);
                     if (tab.posicaoValida(direita) && existeInimigo(direita) && tab.peca(direita) == partida.vulneravelEnpassant)
                     {
-                        mat[direita.Linha, direita.Coluna] = true;
+                        mat[direita.Linha + 1, direita.Coluna] = true;
                     }
 
                 }
