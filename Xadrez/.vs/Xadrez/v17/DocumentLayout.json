@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\paulo\\source\\repos\\Xadrez\\Xadrez\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE00FE5B-C79F-4B8A-AD39-C3E12E7D30E1}|Xadrez.csproj|C:\\Users\\paulo\\source\\repos\\Xadrez\\Xadrez\\xadrez\\partidadexadrez.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CE00FE5B-C79F-4B8A-AD39-C3E12E7D30E1}|Xadrez.csproj|c:\\users\\paulo\\source\\repos\\xadrez\\xadrez\\xadrez\\partidadexadrez.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE00FE5B-C79F-4B8A-AD39-C3E12E7D30E1}|Xadrez.csproj|solutionrelative:xadrez\\partidadexadrez.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{CE00FE5B-C79F-4B8A-AD39-C3E12E7D30E1}|Xadrez.csproj|solutionrelative:xadrez\\peao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE00FE5B-C79F-4B8A-AD39-C3E12E7D30E1}|Xadrez.csproj|c:\\users\\paulo\\source\\repos\\xadrez\\xadrez\\xadrez\\rei.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CE00FE5B-C79F-4B8A-AD39-C3E12E7D30E1}|Xadrez.csproj|C:\\Users\\paulo\\source\\repos\\Xadrez\\Xadrez\\xadrez\\rei.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE00FE5B-C79F-4B8A-AD39-C3E12E7D30E1}|Xadrez.csproj|solutionrelative:xadrez\\rei.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -99,8 +99,7 @@
               "RelativeToolTip": "xadrez\\Peao.cs",
               "ViewState": "AQIAAEYAAAAAAAAAAAAkwGkAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T23:17:53.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-30T23:17:53.238Z"
             },
             {
               "$type": "Document",
@@ -134,7 +133,7 @@
               "RelativeDocumentMoniker": "xadrez\\PartidaDeXadrez.cs",
               "ToolTip": "C:\\Users\\paulo\\source\\repos\\Xadrez\\Xadrez\\xadrez\\PartidaDeXadrez.cs",
               "RelativeToolTip": "xadrez\\PartidaDeXadrez.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA1AAAA",
+              "ViewState": "AQIAAPEAAAAAAAAAAAAiwPwAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-30T21:04:40.447Z",
               "EditorCaption": ""
@@ -149,8 +148,7 @@
               "RelativeToolTip": "xadrez\\Rei.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAHcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T21:58:55.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-22T21:58:55.02Z"
             },
             {
               "$type": "Document",
